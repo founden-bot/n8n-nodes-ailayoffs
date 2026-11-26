@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-labelledby="aijl-icon-title">
+  <title id="aijl-icon-title">AI Layoffs</title>
+  <!-- Faint primary-tint tile (10% of brand blue, 90% transparent). -->
+  <rect width="128" height="128" rx="30" fill="#60a5fa" fill-opacity="0.16"/>
+  <!-- A solid equilateral triangle (the A) with the I as a bar laid diagonally against its right slope. -->
+  <polygon points="25,88 83,88 54,37.8" fill="#60a5fa"/>
+  <polygon points="60,37.8 74,37.8 103,88 89,88" fill="#60a5fa"/>
+</svg>

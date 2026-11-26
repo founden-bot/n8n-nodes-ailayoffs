@@ -1,0 +1,21 @@
+{
+	"node": "n8n-nodes-ailayoffs.aiLayoffsTrigger",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": [
+		"Sales",
+		"Data & Storage"
+	],
+	"resources": {
+		"credentialDocumentation": [
+			{
+				"url": "https://ailayoffs.org/integrations"
+			}
+		],
+		"primaryDocumentation": [
+			{
+				"url": "https://github.com/founden-bot/n8n-nodes-ailayoffs#readme"
+			}
+		]
+	}
+}
