@@ -92,8 +92,10 @@ jobs:
         #   npm uses the OIDC exchange instead.
         # Option B (token): set NPM_TOKEN in repo secrets — it is written to
         #   .npmrc here before publishing.
+        # On failure the last lines of the release output become an annotation, readable through the GitHub API.
         run: |
           [ -n "$NPM_TOKEN" ] && npm config set //registry.npmjs.org/:_authToken "$NPM_TOKEN"
-          npm run release
+          set -o pipefail
+          npm run release 2>&1 | tee release.log || { echo "::error title=npm release failed::$(tail -c 3500 release.log | sed -e ':a' -e 'N' -e '$!ba' -e 's/%/%25/g' -e 's/\r/%0D/g' -e 's/\n/%0A/g')"; exit 1; }
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
